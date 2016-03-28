@@ -2,13 +2,15 @@
 
 AndroidLogcatSDK是一个在android上输出日志的工具，以往调试往往需要首先使用usb连接到电脑，然后使用logcat工具在电脑上查看日志，而AndroidLogcatSDK可以仅仅使用移动设备就可以输出日志到sd卡上。
 
-##声明：
-这个工程只有AndroidLogcatSdk.java类是我实现的，其余的代码都是对别人代码的重构。
+我看到github上也有类似的rep，不过功能好像与这个不同，我并没有仔细研究[那个rep](https://github.com/DrJia/AndroidLogCollector)，有兴趣的同学可以去看看。
 
-参考代码：http://easion-zms.iteye.com/blog/981568#comments
+##声明：
+这个工程只有AndroidLogcatSdk.java类是我实现的，其余的代码都是对于[这篇文章](http://easion-zms.iteye.com/blog/981568#comments)里的代码的重构。
 
 ##使用方法：
+
 ###API简介
+
 启动LogService服务,开始输出日志
 
 			AndroidLogcatSdk.Instance().Init(_activity, "", 0, "", "", "");
@@ -32,6 +34,10 @@ Ftp上传，这个未测试啊
 			<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
 			<service android:name="org.c2man.logcat.service.LogService" />
+
+输出日志的目录，不出意外的话，一般是：
+
+			Android/data/{your package name}/log/
 			
 ###我的一般写法
 我一般会这样写，在app初始化时，调用：
