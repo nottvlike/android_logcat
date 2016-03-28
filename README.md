@@ -23,6 +23,14 @@ Ftp上传，这个未测试啊
 
 			AndroidLogcatSdk.Instance().UploadCurrentLog()
 			
+记得添加权限和service
+
+			<uses-permission android:name="android.permission.READ_LOGS" />
+			<uses-permission android:name="android.permission.WAKE_LOCK" />
+			<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+			<service android:name="org.c2man.logcat.service.LogService" />
+			
 ###我的一般写法
 我一般会这样写，在app初始化时，调用：
 
