@@ -2,7 +2,9 @@
 
 AndroidLogcatSDK是一个在android上输出日志的工具，以往调试往往需要首先使用usb连接到电脑，然后使用logcat工具在电脑上查看日志，而AndroidLogcatSDK可以仅仅使用移动设备就可以输出日志到sd卡上。
 
-这个工程只有AndroidLogcatSdk.java类是我实现的，其余的代码都是对别人代码的简单重构。
+##声明：
+这个工程只有AndroidLogcatSdk.java类是我实现的，其余的代码都是对别人代码的重构。
+
 参考代码：http://easion-zms.iteye.com/blog/981568#comments
 
 ##使用方法：
